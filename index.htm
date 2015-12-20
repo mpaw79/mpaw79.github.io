@@ -100,6 +100,7 @@
 		<script src ="js/controls/TrackballControls.js"></script>
 		<script src ="js/controls/OrbitControls.js"></script>
 		<script src ="js/controls/DragControls.js"></script>
+		<script src ="js/controls/MouseControls.js"></script>
 		<script src="js/loaders/ColladaLoader.js"></script>
 
 		<script src="js/Detector.js"></script>
@@ -135,8 +136,10 @@
 				controls.addEventListener('change', render);
 				orbContr = new THREE.OrbitControls(camera);
 				orbContr.addEventListener('change', render);
-				dragContr = new THREE.dragControls(camera);
-				drafContr.addEventListener('change', render);
+				dragContr = new THREE.DragControls(camera);
+				dragContr.addEventListener('change', render);
+				mouseContr = new THREE.MouseControls(camera);
+				mouseContr.addEventListener('change', render);
 				scene = new THREE.Scene();
 				// Grid
 				var size = 14, step = 1;
