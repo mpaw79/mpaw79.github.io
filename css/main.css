@@ -94,6 +94,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+div{
+	font-family: geomanist_regularregular, Arial, sans-serif;
+	color:#034F84;
+	font-size:1.3em;
+	font-weight: bold;
+}
 
 
 
