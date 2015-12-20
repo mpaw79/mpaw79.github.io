@@ -165,7 +165,7 @@
 				stats.domElement.style.top = '0px';
 				container.appendChild( stats.domElement );
 				//
-				window.addEventListener( 'resize', onWindowResize, false );
+				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
 				camera.aspect = window.innerWidth / window.innerHeight;
@@ -173,11 +173,11 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
 			//
-			function animate() {
+			/*function animate() {
 				requestAnimationFrame( animate );
 				render();
 				stats.update();
-			}
+			}*/
 			var clock = new THREE.Clock();
 			function render() {
 				var timer = Date.now() * 0.0005;
