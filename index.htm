@@ -112,7 +112,7 @@
 			var dae;
 			var loader = new THREE.ColladaLoader();
 			loader.options.convertUpAxis = true;
-			loader.load( 'models/Pool.dae', function ( collada ) {
+			loader.load( 'models/miko.dae', function ( collada ) {
 				dae = collada.scene;
 				dae.traverse( function ( child ) {
 					if ( child instanceof THREE.SkinnedMesh ) {
@@ -129,7 +129,7 @@
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 450 );
-				camera.position.set( 2, 2, 3 );
+				camera.position.set( 2, 2, 100 );
 				controls = new THREE.TrackballControls(camera);
 				controls.addEventListener('change', render);
 				orbContr = new THREE.OrbitControls(camera);
