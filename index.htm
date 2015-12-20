@@ -132,6 +132,8 @@
 				camera.position.set( 100, 2, 3 );
 				controls = new THREE.TrackballControls(camera);
 				controls.addEventListener('change', render);
+				orbContr = new THREE.OrbitControls(camera);
+				orbContr.addEventListener('change', render);
 				scene = new THREE.Scene();
 				// Grid
 				var size = 14, step = 1;
