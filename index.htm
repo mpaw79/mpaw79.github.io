@@ -129,7 +129,7 @@
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
-				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 450 );
+				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 2000 );
 				camera.position.set( 2, 2, 100 );
 				controls = new THREE.TrackballControls(camera);
 				controls.addEventListener('change', render);
