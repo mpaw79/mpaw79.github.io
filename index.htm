@@ -99,6 +99,7 @@
 		<script src="js/loaders/collada/KeyFrameAnimation.js"></script>
 		<script src ="js/controls/TrackballControls.js"></script>
 		<script src ="js/controls/OrbitControls.js"></script>
+		<script src ="js/controls/DragControls.js"></script>
 		<script src="js/loaders/ColladaLoader.js"></script>
 
 		<script src="js/Detector.js"></script>
@@ -134,6 +135,8 @@
 				controls.addEventListener('change', render);
 				orbContr = new THREE.OrbitControls(camera);
 				orbContr.addEventListener('change', render);
+				dragContr = new THREE.dragControls(camera);
+				drafContr.addEventListener('change', render);
 				scene = new THREE.Scene();
 				// Grid
 				var size = 14, step = 1;
