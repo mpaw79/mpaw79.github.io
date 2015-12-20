@@ -177,16 +177,16 @@
 			//
 			function animate() {
 				requestAnimationFrame( animate );
-				render();
-				stats.update();
+				controls.update();
 			}*
 			var clock = new THREE.Clock();
 			function render() {
-				var timer = Date.now() * 0.0005;
+				/*var timer = Date.now() * 0.0005;
 				camera.position.x = Math.cos( timer ) * 10;
 				camera.position.y = 2;
 				camera.position.z = Math.sin( timer ) * 10;
 				camera.lookAt( scene.position );
+				*/
 				particleLight.position.x = Math.sin( timer * 4 ) * 3009;
 				particleLight.position.y = Math.cos( timer * 5 ) * 4000;
 				particleLight.position.z = Math.cos( timer * 4 ) * 3009;
