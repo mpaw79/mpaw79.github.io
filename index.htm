@@ -174,8 +174,7 @@
 				particleLight.add( pointLight );
 				var c = $('#myCanvas');	
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
-				var w = $('#myCanvasCont')
-				renderer.setSize(w.innerWidth);
+				
 				onWindowResize()
 				/*renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
@@ -189,6 +188,9 @@
 				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
+				var c = $('#myCanvas');	
+				var w = $('#myCanvasCont')
+				renderer.setSize(w.innerWidth);
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
