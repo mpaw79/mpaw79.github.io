@@ -189,6 +189,7 @@
 				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
+				var c = $('#myCanvas');
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
 				c.get(0)
