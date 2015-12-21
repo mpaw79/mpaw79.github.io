@@ -14,6 +14,10 @@
 		<link rel="stylesheet" href="fonts/01.Geomanist_Regular/Geomanist_Regular_Webfontkit/stylesheet.css" type="text/css" charset="utf-8" />
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+		<style>#myCanvas{
+		width: 100%;
+		height: auto;
+		}
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -35,7 +39,7 @@
 	   <div>words</div>
 	   <div>I'm Mark Pawlaczyk</div>
 	   <div id = "myCanvasCont">
-	   <canvas id = "myCanvas" width="300" height="300"></canvas>
+	   <canvas id = "myCanvas" width="300" height = "300" ></canvas>
   </div>
   <div>
   <!--<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -168,7 +172,8 @@
 				particleLight.add( pointLight );
 				var c = $('#myCanvas');	
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
-				
+				var w = $('#myCanvasCont')
+				renderer.setSize(w.innerWidth);
 				onWindowResize()
 				/*renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
@@ -182,11 +187,9 @@
 				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
-			    var w = $('#myCanvasCont');
-				var wWdth = w.innerWidth;
-				camera.aspect = wWdth / wWdth * 0.56;
+				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				renderer.setSize( wWdth, wWdth * 0.56 );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
 			//
 			function animate() {
