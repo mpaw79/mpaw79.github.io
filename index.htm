@@ -189,10 +189,9 @@
 				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
-				var c = $('#myCanvas');
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
-				
+				renderer.setSize( 1280, 720 );
 				
 			}
 			//
