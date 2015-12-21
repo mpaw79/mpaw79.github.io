@@ -170,6 +170,7 @@
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
 				var w = $('#myCanvasCont')
 				renderer.setSize(w.innerWidth);
+				onWindowResize()
 				/*renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
@@ -184,7 +185,7 @@
 			function onWindowResize() {
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				renderer.setSize( $('#myCanvasCont').innerWidth, $('#myCanvasCont').innerHeight );
+				renderer.setSize( window.innerWidth, window.innerHeight );
 			}
 			//
 			function animate() {
