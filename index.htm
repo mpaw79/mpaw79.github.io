@@ -34,7 +34,7 @@
 	   <div>is worth a 1000</div>
 	   <div>words</div>
 	   <div>I'm Mark Pawlaczyk</div>
-	   <div>
+	   <div id = "myCanvasCont">
 	   <canvas id = "myCanvas" ></canvas>
   </div>
   <div>
@@ -168,7 +168,8 @@
 				particleLight.add( pointLight );
 				var c = $('#myCanvas');	
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
-				renderer.setSize(domElement.innerWidth);
+				var w = $('#myCanvasCont')
+				renderer.setSize(w.innerWidth);
 				/*renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
