@@ -41,7 +41,7 @@
 	   <div>words</div>
 	   <div>I'm Mark Pawlaczyk</div>
 	   <div id = "myCanvasCont">
-	   <canvas id = "myCanvas" width="300" height = "300" ></canvas>
+	   <canvas id = "myCanvas" width="100" height = "56" ></canvas>
   </div>
   <div>
   <!--<?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -189,9 +189,10 @@
 				window.addEventListener( 'resize', onWindowResize, true );
 			}
 			function onWindowResize() {
-				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( 1280, 720 );
+				render.get(0);
 			}
 			//
 			function animate() {
