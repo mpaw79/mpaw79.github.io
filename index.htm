@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 		<style>#myCanvas{
 		width: 100%;
-		height: 56%;
+		height: auto;
 		}
 		</style>
 
@@ -190,11 +190,10 @@
 			function onWindowResize() {
 				var c = $('#myCanvas');	
 				var w = $('#myCanvasCont')
-				renderer.setSize(w.innerWidth);
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
-				renderer.setSize( 1280, 720 );
+				renderer.setSize(w.innerWidth);
 				
 			}
 			//
