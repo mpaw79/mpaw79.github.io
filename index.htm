@@ -166,7 +166,7 @@
 				*/
 				var pointLight = new THREE.PointLight( 0xffffff, 2 );
 				particleLight.add( pointLight );
-				var c = ${'#myCanvas'}
+				var c = $('#myCanvas');
 				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
 				renderer.setSize(700,700);
 				/*renderer.setPixelRatio( window.devicePixelRatio );
