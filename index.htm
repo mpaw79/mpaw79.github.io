@@ -194,8 +194,8 @@
 				renderer.setSize(w.innerWidth);
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
-				renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
-				renderer.setSize( w.innerWidth );
+				
+				renderer.setSize( w.innerWidth, w.innerHeight );
 				
 			}
 			//
