@@ -140,7 +140,7 @@
 				camera.position.set( 2, 2, 100 );
 				controls = new THREE.TrackballControls(camera, renderer.domElement);
 				controls.addEventListener('change', render);
-				orbContr = new THREE.OrbitControls(camera, render.domElement);
+				orbContr = new THREE.OrbitControls(camera, renderer.domElement);
 				orbContr.addEventListener('change', render);
 				
 				scene = new THREE.Scene();
