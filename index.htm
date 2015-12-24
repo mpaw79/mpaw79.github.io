@@ -136,11 +136,12 @@
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
+				container.id = "controlCont"
 				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 2000 );
 				camera.position.set( 2, 2, 100 );
-				controls = new THREE.TrackballControls(camera, renderer.container);
+				controls = new THREE.TrackballControls(camera, $('#controlCont'));
 				controls.addEventListener('change', render);
-				orbContr = new THREE.OrbitControls(camera, renderer.container);
+				orbContr = new THREE.OrbitControls(camera, $('#controlCont'));
 				orbContr.addEventListener('change', render);
 				
 				scene = new THREE.Scene();
