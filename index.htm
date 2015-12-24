@@ -138,9 +138,9 @@
 				document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 2000 );
 				camera.position.set( 2, 2, 100 );
-				controls = new THREE.TrackballControls(camera, renderer.domElement);
+				controls = new THREE.TrackballControls(camera, renderer.container);
 				controls.addEventListener('change', render);
-				orbContr = new THREE.OrbitControls(camera, renderer.domElement);
+				orbContr = new THREE.OrbitControls(camera, renderer.container);
 				orbContr.addEventListener('change', render);
 				
 				scene = new THREE.Scene();
