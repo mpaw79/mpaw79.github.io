@@ -86,9 +86,9 @@
 				
 				camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 2000 );
 				camera.position.set( 2, 2, 100 );
-				controls = new THREE.TrackballControls(camera);
+				controls = new THREE.TrackballControls(camera, canvas);
 				controls.addEventListener('change', render);
-				orbContr = new THREE.OrbitControls(camera);
+				orbContr = new THREE.OrbitControls(camera, canvas);
 				orbContr.addEventListener('change', render);
 				
 				scene = new THREE.Scene();
@@ -141,9 +141,6 @@
 				var w = $('#myCanvasCont')
 				camera.aspect = 1280/ 720;
 				camera.updateProjectionMatrix();
-				
-			
-				console.log(renderer)
 				
 			}
 			//
