@@ -138,8 +138,11 @@
 	}
 
 	if ( webglAvailable() ) {
+		console.log("yes webgl")
 		renderer = new THREE.WebGLRenderer({canvas: c.get(0)});
+		
 	} else {
+		console.log("NO webgl")
 		renderer = new THREE.CanvasRenderer({canvas: c.get(0)});
 	}
 				
